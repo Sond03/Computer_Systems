@@ -1,0 +1,15 @@
+Fill in the table below showing the effects of the different shift operations on single-
+byte quantities. The best way to think about shift operations is to work with binary
+representations. Convert the initial values to binary, perform the shifts, and then
+convert back to hexadecimal. Each of the answers should be 8 binary digits or 2
+hexadecimal digits.
+
+                                      Logical        Arithmetic
+      a             a << 2            a >> 3           a >> 3
+─────────────    ─────────────    ─────────────    ─────────────
+Hex    Binary    Binary    Hex    Binary    Hex    Binary    Hex
+────────────────────────────────────────────────────────────────
+0xD4   11010100  01010000  0x50   00011010  0x1A   11111010  0xFA
+0x64   01100100  10010000  0x90   00001100  0x0C   11101100  0xEC
+0x72   01110010  11001000  0xC8   00001110  0x0E   00001110  0x0E
+0x44   01000100  00100000  0x10   00001000  0x08   11101000  0xE8
