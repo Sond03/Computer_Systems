@@ -1,0 +1,21 @@
+Consider the following three calls to show_bytes:
+
+int a = 0x12345678;
+byte_pointer ap = (byte_pointer) &a;
+show_bytes(ap, 1); /* A. */
+show_bytes(ap, 2); /* B. */
+show_bytes(ap, 3); /* C. */
+
+Indicate the values that will be printed by each call on a little-endian machine
+and on a big-endian machine:
+
+A. Little endian: 78        Big endian: 12
+B. Little endian: 78 56     Big endian: 12 34
+C. Little endian: 78 56 34  Big endian: 12 34 56
+
+0x12 34 56 78 is the full "hex" in this case so the full little endian would be
+Little full:78 56 34 12 
+Big full: 12 34 56 78
+
+Big endian is the way we read numbers with the most significant byte first 
+Little endian is the way cpus like to do arithmetic computations with the least significant byte first
