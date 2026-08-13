@@ -1,6 +1,4 @@
-Write C expressions, in terms of variable x, for the following values. Your code
-should work for any word size w ≥8. For reference, we show the result of evalu-
-ating the expressions for x = 0x87654321, with w = 32.
+#### Write C expressions, in terms of variable x, for the following values. Your code should work for any word size w ≥8. For reference, we show the result of evaluating the expressions for x = 0x87654321, with w = 32.
 
 A. The least significant byte of x, with all other bits set to 0. [0x00000021]
 

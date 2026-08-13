@@ -1,15 +1,14 @@
-Armed with the function inplace_swap from Problem 2.10, you decide to write
-code that will reverse the elements of an array by swapping elements from opposite
-ends of the array, working toward the middle.
-You arrive at the following function:
+#### Armed with the function inplace_swap from Problem 2.10, you decide to write code that will reverse the elements of an array by swapping elements from opposite ends of the array, working toward the middle. You arrive at the following function:
 
+``` 
 void reverse_array(int a[], int cnt) {
     int first, last;
     for (first = 0, last = cnt-1;
             first <= last;
             first++,last--)
         inplace_swap(&a[first], &a[last]);
-}
+} 
+```
 
 When you apply your function to an array containing elements 1, 2, 3, and 4,
 you find the array now has, as expected, elements 4, 3, 2, and 1. When you try it
@@ -18,17 +17,14 @@ the array now has elements 5, 4, 0, 2, and 1. In fact, you discover that the cod
 always works correctly on arrays of even length, but it sets the middle element to
 0 whenever the array has odd length.
 
-A. For an array of odd length cnt = 2k + 1, what are the values of variables
-first and last in the final iteration of function reverse_array?
-
+**A. For an array of odd length cnt = 2k + 1, what are the values of variables**
+**first and last in the final iteration of function reverse_array?**
 first will be the same as last 
 
-B. Why does this call to function inplace_swap set the array element to 0?
-
+**B. Why does this call to function inplace_swap set the array element to 0?**
 it sets it to 0 because it will check with the same value and earlier 
 we learn that a^a = 0 in this code it will be a[k] = a[k] ^ a[k] = 0
 
-C. What simple modification to the code for reverse_array would eliminate
-this problem?
-
+**C. What simple modification to the code for reverse_array would eliminate**
+**this problem?**
 Inside the for loop you change the <= to < 
